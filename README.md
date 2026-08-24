@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmartRent
+
+SmartRent is a dual-mode rental management platform for renters, property owners, and administrators. It uses Next.js 16, TypeScript, Tailwind CSS 4, shadcn/ui, and Supabase.
+
+See [docs/SETUP.md](docs/SETUP.md) for Supabase and UI setup instructions.
 
 ## Getting Started
 
