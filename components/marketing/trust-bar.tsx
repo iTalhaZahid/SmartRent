@@ -1,8 +1,8 @@
 const stats = [
-  { value: "Short stays", label: "Flexible daily rentals" },
-  { value: "Long term", label: "Homes built for living" },
-  { value: "Direct", label: "Renter-owner messaging" },
-  { value: "Secure", label: "Protected account access" },
+  {value: "Short stays", label: "Flexible daily rentals"},
+  {value: "Long term", label: "Homes built for living"},
+  {value: "Direct", label: "Renter-owner messaging"},
+  {value: "Secure", label: "Protected account access"},
 ];
 
 export function TrustBar() {

@@ -1,7 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import {ArrowRight} from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
 
 export function CallToAction() {
   return (
@@ -14,7 +14,9 @@ export function CallToAction() {
           <h2 className="mt-5 text-3xl font-bold tracking-tight sm:text-5xl">Ready to find a place that feels like yours?</h2>
           <p className="mt-5 text-lg leading-8 text-teal-50">Create your free account and make your next rental feel refreshingly straightforward.</p>
           <Button size="lg" variant="secondary" className="mt-8 h-12 rounded-xl bg-white px-6 text-primary hover:bg-teal-50" asChild>
-            <Link href="/register?role=RENTER">Create your account <ArrowRight /></Link>
+            <Link href="/register?role=RENTER">
+              Create your account <ArrowRight />
+            </Link>
           </Button>
         </div>
       </div>
