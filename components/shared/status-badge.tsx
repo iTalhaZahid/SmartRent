@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+﻿import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 const statusStyles: Record<string, string> = {
@@ -13,6 +13,7 @@ const statusStyles: Record<string, string> = {
   BOOKED: "border-blue-200 bg-blue-50 text-blue-700",
   BLOCKED: "border-slate-300 bg-slate-100 text-slate-700",
   INACTIVE: "border-slate-300 bg-slate-100 text-slate-700",
+  RENTED: "border-blue-200 bg-blue-50 text-blue-700",
   COMPLETED: "border-slate-300 bg-slate-100 text-slate-700",
 };
 
