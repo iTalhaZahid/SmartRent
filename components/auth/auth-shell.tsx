@@ -1,4 +1,4 @@
-import { CheckCircle2, Home, KeyRound, ShieldCheck } from "lucide-react";
+import {CheckCircle2, Home, KeyRound, ShieldCheck} from "lucide-react";
 
 type AuthShellProps = {
   children: React.ReactNode;
@@ -8,12 +8,12 @@ type AuthShellProps = {
 };
 
 const assurances = [
-  { icon: ShieldCheck, label: "Verified listings" },
-  { icon: KeyRound, label: "Secure bookings" },
-  { icon: CheckCircle2, label: "Simple rental management" },
+  {icon: ShieldCheck, label: "Verified listings"},
+  {icon: KeyRound, label: "Secure bookings"},
+  {icon: CheckCircle2, label: "Simple rental management"},
 ];
 
-export function AuthShell({ children, eyebrow, title, description }: AuthShellProps) {
+export function AuthShell({children, eyebrow, title, description}: AuthShellProps) {
   return (
     <main className="w-full max-w-full flex-1 overflow-x-hidden bg-white lg:grid lg:grid-cols-[minmax(0,1.08fr)_minmax(520px,0.92fr)]">
       <section className="relative hidden min-h-[760px] overflow-hidden bg-slate-950 px-12 py-10 text-white lg:flex lg:flex-col xl:px-16">
@@ -22,12 +22,8 @@ export function AuthShell({ children, eyebrow, title, description }: AuthShellPr
 
         <div className="relative z-10 my-auto max-w-xl py-10">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">A better way to rent</p>
-          <h2 className="max-w-lg text-4xl font-bold leading-[1.12] tracking-tight xl:text-5xl">
-            Your next place should feel like home.
-          </h2>
-          <p className="mt-5 max-w-lg text-base leading-7 text-slate-300 xl:text-lg">
-            Discover trusted homes, connect directly, and manage every step of your rental in one clear space.
-          </p>
+          <h2 className="max-w-lg text-4xl font-bold leading-[1.12] tracking-tight xl:text-5xl">Your next place should feel like home.</h2>
+          <p className="mt-5 max-w-lg text-base leading-7 text-slate-300 xl:text-lg">Discover trusted homes, connect directly, and manage every step of your rental in one clear space.</p>
 
           <div className="relative mt-12 h-64 max-w-[540px]" aria-hidden="true">
             <div className="absolute bottom-0 left-4 h-40 w-56 rounded-t-[2rem] border border-white/10 bg-white/[0.07] backdrop-blur-sm" />
@@ -36,16 +32,23 @@ export function AuthShell({ children, eyebrow, title, description }: AuthShellPr
               <Home className="size-10" strokeWidth={1.7} />
             </div>
             <div className="absolute bottom-24 left-12 grid grid-cols-2 gap-6">
-              {[0, 1, 2, 3].map((window) => <span key={window} className="size-5 rounded-md bg-teal-300/50" />)}
+              {[0, 1, 2, 3].map((window) => (
+                <span key={window} className="size-5 rounded-md bg-teal-300/50" />
+              ))}
             </div>
             <div className="absolute bottom-20 right-10 grid grid-cols-3 gap-6">
-              {[0, 1, 2, 3, 4, 5].map((window) => <span key={window} className="size-5 rounded-md bg-slate-400/30" />)}
+              {[0, 1, 2, 3, 4, 5].map((window) => (
+                <span key={window} className="size-5 rounded-md bg-slate-400/30" />
+              ))}
             </div>
           </div>
 
           <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-300">
-            {assurances.map(({ icon: Icon, label }) => (
-              <span key={label} className="inline-flex items-center gap-2"><Icon className="size-4 text-teal-400" />{label}</span>
+            {assurances.map(({icon: Icon, label}) => (
+              <span key={label} className="inline-flex items-center gap-2">
+                <Icon className="size-4 text-teal-400" />
+                {label}
+              </span>
             ))}
           </div>
         </div>
