@@ -1,5 +1,5 @@
-﻿import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+﻿import {Badge} from "@/components/ui/badge";
+import {cn} from "@/lib/utils";
 
 const statusStyles: Record<string, string> = {
   ACTIVE: "border-green-200 bg-green-50 text-green-700",
@@ -17,18 +17,9 @@ const statusStyles: Record<string, string> = {
   COMPLETED: "border-slate-300 bg-slate-100 text-slate-700",
 };
 
-export function StatusBadge({
-  status,
-  className,
-}: {
-  status: string;
-  className?: string;
-}) {
+export function StatusBadge({status, className}: {status: string; className?: string}) {
   return (
-    <Badge
-      variant="outline"
-      className={cn("rounded-full px-2.5 py-1 text-xs font-medium", statusStyles[status], className)}
-    >
+    <Badge variant="outline" className={cn("rounded-full px-2.5 py-1 text-xs font-medium", statusStyles[status], className)}>
       {status.replaceAll("_", " ")}
     </Badge>
   );
