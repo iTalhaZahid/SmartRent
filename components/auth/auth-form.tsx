@@ -14,6 +14,11 @@ export type AuthState = {
   fieldErrors?: Record<string, string[]>;
 };
 
+export function ResetPasswordInput() {
+  const [visible, setVisible] = useState(false);
+  return <div className="relative"><Input id="new-password" name="password" type={visible ? "text" : "password"} minLength={8} required autoComplete="new-password" className="pr-11" /><button type="button" onClick={() => setVisible((value) => !value)} className="absolute inset-y-0 right-0 grid w-11 place-items-center text-slate-500 hover:text-slate-900" aria-label={visible ? "Hide password" : "Show password"}>{visible ? <EyeOff className="size-4" /> : <Eye className="size-4" />}</button></div>;
+}
+
 type AuthAction = (state: AuthState, formData: FormData) => Promise<AuthState>;
 
 export function AuthForm({ mode, action, next = "/", initialError, initialRole = "RENTER" }: { mode: "login" | "signup"; action: AuthAction; next?: string; initialError?: string; initialRole?: "RENTER" | "OWNER" }) {
@@ -77,6 +82,8 @@ export function AuthForm({ mode, action, next = "/", initialError, initialRole =
           {errorFor("role") && <p className="text-sm text-red-600">{errorFor("role")}</p>}
         </fieldset>
       )}
+
+      {!isSignup && <Link href="/login?reset=1" className="block text-right text-sm font-medium text-teal-700 hover:underline">Forgot password?</Link>}
 
       <Button type="submit" disabled={pending} className="h-11 w-full bg-teal-700 text-base shadow-sm hover:bg-teal-800 focus-visible:ring-2 focus-visible:ring-teal-200">
         {pending && <LoaderCircle className="size-4 animate-spin" aria-hidden="true" />}
